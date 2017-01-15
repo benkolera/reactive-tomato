@@ -1,0 +1,23 @@
+{
+  "parser"  : "babel-eslint",
+  "plugins": [
+    "flowtype",
+    "fp"
+  ],
+  "extends" : [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "arrow-parens": 0, // Does not work with Flow generic types.
+    "import/prefer-default-export": 0, // No. Actions can have just one action.
+    "no-nested-ternary": 0, // It's nice for JSX.
+    "react/forbid-prop-types": 0, // Este is going to use Flow types.
+    "react/no-unused-prop-types": 0, // Este is going to use Flow types.
+    "react/prop-types": 0, // Can't detect flowtype correctly.
+    "fp/no-mutating-assign": 2
+  }
+}
